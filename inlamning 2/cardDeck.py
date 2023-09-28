@@ -1,13 +1,11 @@
 import random
 
-import random
-
 class CardDeck:
     def __init__(self):
         suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
         values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace']
 
-        # Skapa en kortlek med 52 kort med integer-värden
+
         self.deck = [{'Value': value, 'Suit': suit, 'Points': self.assign_points(value)} for suit in suits for value in
                      values]
 
