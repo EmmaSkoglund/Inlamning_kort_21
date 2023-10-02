@@ -21,10 +21,12 @@ newRound = True
 
 while True:
     while newRound:
+        #deck = CardDeck()
         deck.shuffle()
         playerHand = [deck.draw_card()]
         dealerHand = [deck.draw_card()]
         newRound = False
+        playerTurn = True
         playerPoint = 0
         dealerPoint = 0
 
@@ -101,6 +103,8 @@ while True:
             print("Dealern took a new card")
             newCard = deck.draw_card()
             dealerHand.append(newCard)
+            dealerPoint = deck.calculate_points(dealerHand)
+
 
         elif dealerPoint == 21:
             playAgain = input("The dealer has won!\nDo you want to play again? (Y/N) > ").lower()
