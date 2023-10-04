@@ -21,7 +21,6 @@ newRound = True
 
 while True:
     while newRound:
-        #deck = CardDeck()
         deck.shuffle()
         playerHand = [deck.draw_card()]
         dealerHand = [deck.draw_card()]
@@ -59,7 +58,7 @@ while True:
         print(row)
     dealerPoint = deck.calculate_points(dealerHand)
     print("Total dealer score:", dealerPoint)
-        
+
     print("-" * 5)
     if playerTurn:
         newCard = input("Do you want a new card? Y/N\n> ").lower()
@@ -89,7 +88,7 @@ while True:
             elif playAgain == "y":
                 newRound = True
                 continue
-            
+
         elif playerPoint > 21:
             playAgain = input("you lost and the dealer has won!\nDo you want to play again? (Y/N) >").lower()
             if playAgain == "n":
@@ -113,7 +112,7 @@ while True:
             elif playAgain == "y":
                 newRound = True
                 continue
-           
+
         elif dealerPoint > 21:
             playAgain = input("The dealer has lost!\nDo you want to play again? (Y/N) > ").lower()
             if playAgain == "n":
@@ -137,6 +136,3 @@ while True:
             elif playAgain == "y":
                 newRound = True
                 continue
-
-
-

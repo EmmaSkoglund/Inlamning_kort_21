@@ -2,14 +2,13 @@ import random
 
 class CardDeck:
     def __init__(self):
-        h = chr(9829) # h = hearts
-        d = chr(9830) # d = diamonds
-        s = chr(9824) # s = spades
-        c = chr(9827) # c = clubs
+        hearts = chr(9829)
+        diamonds = chr(9830)
+        spades = chr(9824)
+        clubs = chr(9827)
 
-        suits = [h, d, s, c]
+        suits = [hearts, diamonds, spades, clubs]
         values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
-
 
         self.deck = [{'Value': value, 'Suit': suit, 'Points': self.assign_points(value)} for suit in suits for value in
                      values]
