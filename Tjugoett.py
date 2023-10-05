@@ -28,9 +28,33 @@ def displayHand(hand):
     for row in rows:
         print(row)
 
+
 def welcomeDisplay():
-    print("-" * 30)
-    print(".: Welcome :.".center(30))
+    # Välkomstmeddelande
+    print("-" * 40)
+    print(".: Welcome :.".center(40))
+    play = input("You will now get to play the card game 21!\nDo you want to play? Y/N > ").lower()
+    try:
+        if play == "n":
+            return False
+        elif play == "j":
+            return True
+    except ValueError:
+        input("ERROR: Wrong choice! Please select Y/N\nPress enter to continue...")
+
+
+def rules():
+    # Visar regler och hur man spelar
+    print("-" * 40)
+    print("This is how the game works. You play against a dealer,")
+    print("The game starts off by being dealt one card each, the player and the dealer.")
+    print("Each round you have a choice to either be dealt another card or stop.")
+    print("The goal is to reach 21 points.")
+    print("If your score surpasses \"21\" you lose, the same rules apply to the dealer, ")
+    print("The one closest to 21 at the end of game, win")
+    print("If it's a tie, the dealer win.")
+    print("The player is the first to play, then the dealer.")
+    input("Press enter to continue...")
 
 
  # Huvudfunktionen här alla regler finns för hur spelet ska gå till
@@ -167,7 +191,8 @@ def playAgain():
 # Huvudfunktion som initierar spelet
 def main():
     welcomeDisplay()
-    """"
+    rules()
+
     while True:
         # Skapa en ny kortlek för varje spel
         # Anropar huvudfunktionen
@@ -175,7 +200,7 @@ def main():
         playRound(deck)
         if not playAgain(): # Bryter spelet om användaren inte vill spela mer
             break
-            """
+
 
         
 if __name__ == "__main__":
