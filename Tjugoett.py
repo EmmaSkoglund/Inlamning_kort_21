@@ -28,6 +28,10 @@ def displayHand(hand):
     for row in rows:
         print(row)
 
+def welcomeDisplay():
+    print("-" * 30)
+    print(".: Welcome :.".center(30))
+
 
  # Huvudfunktionen här alla regler finns för hur spelet ska gå till
 def playRound(deck):
@@ -162,6 +166,8 @@ def playAgain():
 
 # Huvudfunktion som initierar spelet
 def main():
+    welcomeDisplay()
+    """"
     while True:
         # Skapa en ny kortlek för varje spel
         # Anropar huvudfunktionen
@@ -169,6 +175,7 @@ def main():
         playRound(deck)
         if not playAgain(): # Bryter spelet om användaren inte vill spela mer
             break
+            """
 
         
 if __name__ == "__main__":
